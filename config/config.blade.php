@@ -67,7 +67,7 @@
     <form action="{{ route('admin.themes.config', $theme) }}" method="POST" id="nlConfigForm">
         @csrf
 
-        {{-- Apparence --}}
+        {{-- Appearance --}}
         <div class="card shadow mb-4">
             <div class="card-header"><h5 class="card-title mb-0"><i class="bi bi-palette"></i> {{ trans('theme::theme.config.look') }}</h5></div>
             <div class="card-body">
@@ -170,7 +170,7 @@
             </div>
         </div>
 
-        {{-- Haut de l'accueil --}}
+        {{-- Home page header --}}
         <div class="card shadow mb-4">
             <div class="card-header"><h5 class="card-title mb-0"><i class="bi bi-type-h1"></i> {{ trans('theme::theme.config.home') }}</h5></div>
             <div class="card-body">
@@ -238,7 +238,7 @@
             </div>
         </div>
 
-        {{-- Sections de l'accueil --}}
+        {{-- Home page sections --}}
         <div class="card shadow mb-4">
             <div class="card-header"><h5 class="card-title mb-0"><i class="bi bi-layout-text-window-reverse"></i> {{ trans('theme::theme.config.sections') }}</h5></div>
             <div class="card-body">
@@ -273,7 +273,7 @@
             </div>
         </div>
 
-        {{-- Pied de page --}}
+        {{-- Footer --}}
         <div class="card shadow mb-4">
             <div class="card-header"><h5 class="card-title mb-0"><i class="bi bi-layout-text-sidebar-reverse"></i> {{ trans('theme::theme.config.footer') }}</h5></div>
             <div class="card-body">

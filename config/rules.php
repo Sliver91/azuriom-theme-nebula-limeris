@@ -10,7 +10,7 @@ return [
     'nav_sticky' => ['required', 'boolean'],
     'theme_switch' => ['required', 'boolean'],
 
-    // Haut de l'accueil
+    // Home page header
     'title' => ['nullable', 'string', 'max:40'],
     'tagline' => ['nullable', 'string', 'max:200'],
     'address' => ['nullable', 'string', 'max:100'],
@@ -22,7 +22,7 @@ return [
     'show_online' => ['required', 'boolean'],
     'show_votes' => ['required', 'boolean'],
 
-    // Sections de l'accueil
+    // Home page sections
     'show_news' => ['required', 'boolean'],
     'show_goal' => ['required', 'boolean'],
     'show_top' => ['required', 'boolean'],
@@ -31,7 +31,7 @@ return [
     'show_steps' => ['required', 'boolean'],
     'discord' => ['nullable', 'url', 'max:200'],
 
-    // Apparence
+    // Appearance
     'background' => ['required', 'in:none,violet,bleu,emeraude,braise,aube,etoiles'],
     'veil' => ['required', 'in:leger,moyen,fort'],
     'radius' => ['required', 'in:droit,leger,rond'],
@@ -40,7 +40,7 @@ return [
     'color_light' => ['required', new Color()],
     'default_dark' => ['required', 'boolean'],
 
-    // Pied de page
+    // Footer
     'footer_text' => ['nullable', 'string', 'max:300'],
     'show_social' => ['required', 'boolean'],
     'footer_links' => ['nullable', 'array', 'max:8'],

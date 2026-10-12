@@ -1,6 +1,6 @@
 /* Nebula Limeris - Limeris.fr by Sliver91 */
 
-/* ---------- Couleurs et polices ---------- */
+/* ---------- Colors and fonts ---------- */
 body.nl {
     --nl-bg: #f5f2fa;
     --nl-hero: #ebe4f8;
@@ -65,7 +65,7 @@ body.nl a { text-decoration: none; }
 body.nl img { max-width: 100%; height: auto; }
 body.nl :focus-visible { outline: 2px solid var(--bs-primary); outline-offset: 3px; }
 
-/* Pages d'Azuriom et des plugins : mêmes surfaces que le thème */
+/* Azuriom and plugin pages: same surfaces as the theme */
 body.nl .card { --bs-card-bg: var(--nl-surface); --bs-card-border-color: var(--nl-line); --bs-card-cap-bg: transparent; }
 body.nl .dropdown-menu { --bs-dropdown-bg: var(--nl-surface); --bs-dropdown-border-color: var(--nl-line); --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg); --bs-dropdown-link-active-bg: var(--bs-primary); --bs-dropdown-link-active-color: var(--bs-primary-color-contrast); }
 body.nl .modal-content { --bs-modal-bg: var(--nl-surface); }
@@ -74,7 +74,7 @@ body.nl .form-control, body.nl .form-select { background-color: var(--nl-surface
 body.nl .table { --bs-table-bg: transparent; --bs-table-border-color: var(--nl-line); }
 body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display); font-weight: 800; text-transform: uppercase; letter-spacing: .01em; }
 
-/* ---------- Boutons du thème ---------- */
+/* ---------- Theme buttons ---------- */
 .nl-btn {
     display: inline-block;
     font: 600 .95rem/1.2 var(--nl-body);
@@ -106,7 +106,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--nl-ok); margin-right: .45rem; }
 .nl-dot-off { background: var(--nl-off); }
 
-/* ---------- Barre de navigation ---------- */
+/* ---------- Navigation bar ---------- */
 .nl-header { background: var(--nl-hero); }
 .nl-nav { padding-block: 1rem; --bs-navbar-color: var(--nl-muted); --bs-navbar-hover-color: var(--nl-fg); --bs-navbar-active-color: var(--nl-fg); --bs-navbar-nav-link-padding-x: .9rem; font-size: .95rem; }
 .nl-brand { font: 800 1.7rem/1 var(--nl-display); letter-spacing: .03em; text-transform: uppercase; color: var(--nl-fg); }
@@ -116,7 +116,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-toggler { border: 1px solid var(--nl-line); color: var(--nl-fg); font-size: 1.4rem; padding: .25rem .6rem; border-radius: var(--nl-radius); }
 .nl-toggler:focus { box-shadow: none; }
 
-/* ---------- Haut de l'accueil ---------- */
+/* ---------- Home page header ---------- */
 .nl-hero { background: var(--nl-hero); padding-block: clamp(1rem, 3vw, 2.5rem) clamp(2rem, 5vw, 3.5rem); }
 .nl-title {
     font: var(--nl-display-weight) clamp(4rem, 17vw, 15rem)/.86 var(--nl-display);
@@ -137,7 +137,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-stats dt { font-weight: 400; font-size: .85rem; color: var(--nl-muted); margin-top: .3rem; white-space: nowrap; }
 .nl-stats div { display: flex; flex-direction: column; }
 
-/* ---------- Corps de l'accueil ---------- */
+/* ---------- Home page body ---------- */
 .nl-alerts { margin-top: 1.5rem; }
 .nl-alerts:empty, .nl-alerts > #status-message:only-child:empty { margin: 0; }
 .nl-home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 21rem); gap: clamp(2rem, 5vw, 4.5rem); padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2.5rem, 6vw, 4.5rem); }
@@ -173,7 +173,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-top span:last-child, .nl-servers span:last-child { font-size: .9rem; color: var(--nl-muted); font-variant-numeric: tabular-nums; }
 .nl-servers li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .55rem; border-bottom: 1px solid var(--nl-line); }
 
-/* ---------- Rejoindre ---------- */
+/* ---------- Join steps ---------- */
 .nl-join { background: var(--nl-surface); border-block: 1px solid var(--nl-line); }
 .nl-join-in { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); padding-block: clamp(2.5rem, 6vw, 4rem); align-items: start; }
 .nl-join h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
@@ -183,7 +183,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-steps strong { font-weight: 600; }
 .nl-steps span { color: var(--nl-muted); font-size: .93rem; }
 
-/* ---------- Pied de page ---------- */
+/* ---------- Footer ---------- */
 .nl-footer { border-top: 1px solid var(--nl-line); font-size: .9rem; color: var(--nl-muted); }
 .nl-footer-in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1.5rem 3rem; padding-block: 2.25rem; }
 .nl-footer-brand { font-size: 1.6rem; margin-bottom: .4rem; }
@@ -192,7 +192,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
 .nl-footer-links { display: flex; gap: 1.1rem; font-size: 1.2rem; }
 .nl-credit a + a { margin-left: .4rem; }
 
-/* ---------- Petits écrans ---------- */
+/* ---------- Small screens ---------- */
 @media (max-width: 991.98px) {
     .nl-nav .navbar-collapse { padding-top: .75rem; }
     .nl-nav-user { align-items: flex-start; margin-left: 0; margin-top: .5rem; }
@@ -208,7 +208,7 @@ body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display
     .nl-btn, .nl-lead h3 a, .nl-posts a { transition: none; }
 }
 
-/* ---------- Fond d'univers (mode sombre) ---------- */
+/* ---------- Space background (dark mode) ---------- */
 body.nl-sky[data-bs-theme=dark] {
     --nl-veil: 19, 7, 34;
     --nl-bg: rgb(var(--nl-veil));
@@ -247,7 +247,7 @@ body.nl-sky[data-bs-theme=dark] .list-group-item {
 }
 body.nl-sky[data-bs-theme=dark] .nl-title { text-shadow: 0 .02em .12em rgba(var(--nl-veil), .45); }
 
-/* Blocs : chaque zone est un panneau translucide posé sur la galaxie */
+/* Blocks: each area is a translucent panel over the background */
 body.nl-sky[data-bs-theme=dark] .nl-nav > .container,
 body.nl-sky[data-bs-theme=dark] .nl-hero > .container,
 body.nl-sky[data-bs-theme=dark] .nl-home,
@@ -285,7 +285,7 @@ body.nl-sky[data-bs-theme=dark] .nl-stats { background: rgba(245, 240, 255, .06)
     body.nl-sky[data-bs-theme=dark] .nl-nav > .container { flex: 1 1 auto; }
 }
 
-/* ---------- Réglages : opacité, forme, police ---------- */
+/* ---------- Settings: opacity, shape, font ---------- */
 body.nl { --nl-veil-a: .64; --nl-block-radius: .75rem; --nl-display-weight: 800; }
 body.nl-veil-leger { --nl-veil-a: .4; }
 body.nl-veil-fort { --nl-veil-a: .86; }
@@ -317,7 +317,7 @@ body.nl-font-technique .nl-stats dd { font-size: 1.7rem; }
 body.nl-font-technique .nl-footer-brand { font-size: 1.35rem; }
 body.nl-font-technique .nl-head h2, body.nl-font-technique .nl-block h2, body.nl-font-technique .nl-join h2, body.nl-font-technique .nl-lead h3, body.nl-font-technique main.content h1, body.nl-font-technique main.content h2 { font-weight: 700; }
 
-/* ---------- Réglages : navigation, accueil, pied de page ---------- */
+/* ---------- Settings: navigation, home page, footer ---------- */
 .nl-brand { display: inline-flex; align-items: center; gap: .6rem; }
 .nl-brand-logo { height: 2rem; width: auto; max-width: 6rem; object-fit: contain; }
 .nl-header-sticky { position: sticky; top: 0; z-index: 1030; }

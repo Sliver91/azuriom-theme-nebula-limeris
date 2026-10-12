@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    /* Le nom du serveur s'ajuste à la largeur disponible, quelle que soit sa longueur. */
+    /* The big title is sized to fit the available width, whatever its length. */
     var ratios = { normal: 0.5, grand: 0.68, geant: 1 };
 
     function fitTitle(title) {
@@ -24,7 +24,7 @@
         document.querySelectorAll('[data-nl-fit]').forEach(fitTitle);
     }
 
-    /* Copie de l'adresse, avec une solution de secours pour les sites en http. */
+    /* Copy the address, with a fallback for sites served over http. */
     function copyText(text) {
         if (navigator.clipboard && window.isSecureContext) {
             return navigator.clipboard.writeText(text);
