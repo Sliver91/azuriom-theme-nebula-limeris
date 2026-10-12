@@ -1,10 +1,38 @@
 # Nebula Limeris
 
-![Aperçu du thème](docs/apercu.png)
+<!-- galerie -->
+![Nebula Limeris, accueil avec le fond Abysse bleu](docs/fond-bleu.jpg)
+<!-- /galerie -->
 
 **Limeris.fr by Sliver91** · [Discord](https://discord.gg/4kV8pgC3Ck) · [limeris.fr](https://limeris.fr)
 
 Thème pour le CMS [Azuriom](https://azuriom.com). Le nom de ton serveur s'affiche en très grand, le site repose sur un fond d'univers que tu choisis, et chaque zone est un bloc translucide posé dessus.
+
+<!-- galerie -->
+## Aperçu
+
+### Six fonds d'univers
+
+| | |
+|:-:|:-:|
+| ![Abysse bleu](docs/fond-bleu.jpg) **Abysse bleu** | ![Nébuleuse violette](docs/fond-violet.jpg) **Nébuleuse violette** |
+| ![Aurore émeraude](docs/fond-emeraude.jpg) **Aurore émeraude** | ![Braise](docs/fond-braise.jpg) **Braise** |
+| ![Aube rose](docs/fond-aube.jpg) **Aube rose** | ![Champ d'étoiles](docs/fond-etoiles.jpg) **Champ d'étoiles** |
+
+### Actualités, objectif de votes et Discord
+
+![Actualités, objectif de votes et bloc Discord](docs/actualites.jpg)
+
+### Mode clair
+
+![Accueil en mode clair](docs/mode-clair.jpg)
+
+### Réglages par cartes illustrées
+
+![Écran de réglages du thème](docs/reglages.jpg)
+
+Les captures utilisent un contenu de démonstration.
+<!-- /galerie -->
 
 ## Ce que voit le joueur
 
