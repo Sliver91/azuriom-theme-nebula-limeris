@@ -1,0 +1,331 @@
+/* Nebula Limeris - Limeris.fr by Sliver91 */
+
+/* ---------- Couleurs et polices ---------- */
+body.nl {
+    --nl-bg: #f5f2fa;
+    --nl-hero: #ebe4f8;
+    --nl-fg: #1d0f36;
+    --nl-muted: #62577a;
+    --nl-line: #d9d0ea;
+    --nl-surface: #ffffff;
+    --nl-title: #2a1247;
+    --nl-ok: #1f9d63;
+    --nl-off: #c2413a;
+    --nl-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+    --nl-body: "Onest", "Segoe UI", system-ui, sans-serif;
+    --nl-radius: .25rem;
+
+    --bs-body-bg: var(--nl-bg);
+    --bs-body-bg-rgb: 245, 242, 250;
+    --bs-body-color: var(--nl-fg);
+    --bs-body-color-rgb: 29, 15, 54;
+    --bs-emphasis-color: var(--nl-fg);
+    --bs-emphasis-color-rgb: 29, 15, 54;
+    --bs-heading-color: var(--nl-fg);
+    --bs-secondary-color: var(--nl-muted);
+    --bs-secondary-bg: #e7e0f3;
+    --bs-secondary-bg-rgb: 231, 224, 243;
+    --bs-tertiary-bg: #efeaf7;
+    --bs-tertiary-bg-rgb: 239, 234, 247;
+    --bs-border-color: var(--nl-line);
+    --bs-border-color-translucent: rgba(29, 15, 54, .14);
+    --bs-body-font-family: var(--nl-body);
+    --bs-border-radius: var(--nl-radius);
+    --bs-border-radius-sm: var(--nl-radius);
+    --bs-border-radius-lg: .375rem;
+
+    font-family: var(--nl-body);
+    background: var(--nl-bg);
+    color: var(--nl-fg);
+    min-height: 100vh;
+}
+
+body.nl[data-bs-theme=dark] {
+    --nl-bg: #1c0b33;
+    --nl-hero: #2a1247;
+    --nl-fg: #f5f0ff;
+    --nl-muted: #b9a8d8;
+    --nl-line: #43286c;
+    --nl-surface: #26113f;
+    --nl-title: #f5f0ff;
+    --nl-ok: #5fe3a1;
+    --nl-off: #ff8f87;
+
+    --bs-body-bg-rgb: 28, 11, 51;
+    --bs-body-color-rgb: 245, 240, 255;
+    --bs-emphasis-color-rgb: 245, 240, 255;
+    --bs-secondary-bg: #321a55;
+    --bs-secondary-bg-rgb: 50, 26, 85;
+    --bs-tertiary-bg: #26113f;
+    --bs-tertiary-bg-rgb: 38, 17, 63;
+    --bs-border-color-translucent: rgba(245, 240, 255, .16);
+}
+
+body.nl a { text-decoration: none; }
+body.nl img { max-width: 100%; height: auto; }
+body.nl :focus-visible { outline: 2px solid var(--bs-primary); outline-offset: 3px; }
+
+/* Pages d'Azuriom et des plugins : mêmes surfaces que le thème */
+body.nl .card { --bs-card-bg: var(--nl-surface); --bs-card-border-color: var(--nl-line); --bs-card-cap-bg: transparent; }
+body.nl .dropdown-menu { --bs-dropdown-bg: var(--nl-surface); --bs-dropdown-border-color: var(--nl-line); --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg); --bs-dropdown-link-active-bg: var(--bs-primary); --bs-dropdown-link-active-color: var(--bs-primary-color-contrast); }
+body.nl .modal-content { --bs-modal-bg: var(--nl-surface); }
+body.nl .list-group { --bs-list-group-bg: var(--nl-surface); --bs-list-group-border-color: var(--nl-line); }
+body.nl .form-control, body.nl .form-select { background-color: var(--nl-surface); border-color: var(--nl-line); color: var(--nl-fg); }
+body.nl .table { --bs-table-bg: transparent; --bs-table-border-color: var(--nl-line); }
+body.nl main.content h1, body.nl main.content h2 { font-family: var(--nl-display); font-weight: 800; text-transform: uppercase; letter-spacing: .01em; }
+
+/* ---------- Boutons du thème ---------- */
+.nl-btn {
+    display: inline-block;
+    font: 600 .95rem/1.2 var(--nl-body);
+    padding: .8rem 1.3rem;
+    border-radius: var(--nl-radius);
+    border: 1px solid var(--bs-primary);
+    background: var(--bs-primary);
+    color: var(--bs-primary-color-contrast);
+    cursor: pointer;
+    transition: filter .15s ease, border-color .15s ease, transform .15s ease;
+}
+.nl-btn:hover { filter: brightness(1.08); color: var(--bs-primary-color-contrast); }
+.nl-btn:active { transform: translateY(1px); }
+.nl-btn-line { background: transparent; color: var(--nl-fg); border-color: var(--nl-line); }
+.nl-btn-line:hover { filter: none; border-color: var(--nl-fg); color: var(--nl-fg); }
+.nl-btn-sm { padding: .5rem 1rem; font-size: .9rem; }
+.nl-address {
+    font: 500 .9rem ui-monospace, SFMono-Regular, Consolas, monospace;
+    padding: .55rem .9rem;
+    border: 1px dashed var(--nl-muted);
+    border-radius: var(--nl-radius);
+    background: transparent;
+    color: var(--nl-fg);
+    cursor: pointer;
+    align-self: flex-start;
+}
+.nl-address:hover, .nl-address.nl-copied { border-style: solid; border-color: var(--bs-primary); }
+.nl-muted { color: var(--nl-muted); }
+.nl-dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--nl-ok); margin-right: .45rem; }
+.nl-dot-off { background: var(--nl-off); }
+
+/* ---------- Barre de navigation ---------- */
+.nl-header { background: var(--nl-hero); }
+.nl-nav { padding-block: 1rem; --bs-navbar-color: var(--nl-muted); --bs-navbar-hover-color: var(--nl-fg); --bs-navbar-active-color: var(--nl-fg); --bs-navbar-nav-link-padding-x: .9rem; font-size: .95rem; }
+.nl-brand { font: 800 1.7rem/1 var(--nl-display); letter-spacing: .03em; text-transform: uppercase; color: var(--nl-fg); }
+.nl-nav .nl-brand:hover { color: var(--nl-fg); }
+.nl-nav .nav-link.active { font-weight: 500; }
+.nl-nav-user { align-items: center; margin-left: .75rem; gap: .25rem; }
+.nl-toggler { border: 1px solid var(--nl-line); color: var(--nl-fg); font-size: 1.4rem; padding: .25rem .6rem; border-radius: var(--nl-radius); }
+.nl-toggler:focus { box-shadow: none; }
+
+/* ---------- Haut de l'accueil ---------- */
+.nl-hero { background: var(--nl-hero); padding-block: clamp(1rem, 3vw, 2.5rem) clamp(2rem, 5vw, 3.5rem); }
+.nl-title {
+    font: var(--nl-display-weight) clamp(4rem, 17vw, 15rem)/.86 var(--nl-display);
+    color: var(--nl-title);
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    padding-top: .06em;
+}
+.nl-title span { display: inline-block; }
+.nl-hero-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: end; margin-top: clamp(1.25rem, 3vw, 2rem); }
+.nl-hero-text { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.nl-tagline { font-size: 1.15rem; max-width: 34rem; margin: 0; }
+.nl-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.nl-stats { display: flex; gap: 2rem; margin: 0; padding: 1rem 1.4rem; background: var(--nl-surface); border: 1px solid var(--nl-line); border-radius: calc(var(--nl-block-radius) * .6); }
+.nl-stats dd { margin: 0; font: 800 2rem/1 var(--nl-display); font-variant-numeric: tabular-nums; }
+.nl-stats dt { font-weight: 400; font-size: .85rem; color: var(--nl-muted); margin-top: .3rem; white-space: nowrap; }
+.nl-stats div { display: flex; flex-direction: column; }
+
+/* ---------- Corps de l'accueil ---------- */
+.nl-alerts { margin-top: 1.5rem; }
+.nl-alerts:empty, .nl-alerts > #status-message:only-child:empty { margin: 0; }
+.nl-home { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 21rem); gap: clamp(2rem, 5vw, 4.5rem); padding-block: clamp(1.5rem, 4vw, 3rem) clamp(2.5rem, 6vw, 4.5rem); }
+.nl-col { display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; }
+.nl-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-bottom: 2px solid var(--nl-fg); padding-bottom: .6rem; }
+.nl-head h2, .nl-block h2, .nl-join h2, .nl-lead h3 { font-family: var(--nl-display); font-weight: 800; text-transform: uppercase; letter-spacing: .01em; line-height: 1; margin: 0; }
+.nl-head h2 { font-size: 2rem; }
+.nl-head a { font-size: .9rem; color: var(--nl-muted); }
+.nl-head a:hover { color: var(--nl-fg); }
+.nl-message { padding-bottom: 1.25rem; border-bottom: 1px solid var(--nl-line); }
+.nl-message > :last-child { margin-bottom: 0; }
+.nl-lead { display: flex; flex-direction: column; gap: .7rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--nl-line); }
+.nl-lead img { width: 100%; max-height: 22rem; object-fit: cover; border-radius: var(--nl-radius); display: block; }
+.nl-lead h3 { font-size: clamp(2rem, 4.5vw, 3.1rem); text-wrap: balance; }
+.nl-lead h3 a, .nl-posts a { color: var(--nl-fg); transition: color .15s ease; }
+.nl-lead h3 a:hover, .nl-posts a:hover { color: var(--bs-primary); }
+.nl-lead p { max-width: 38rem; color: var(--nl-muted); margin: 0; }
+.nl-lead time, .nl-posts time { font-size: .88rem; color: var(--nl-muted); font-variant-numeric: tabular-nums; }
+.nl-posts { list-style: none; padding: 0; margin: -1.5rem 0 0; }
+.nl-posts li { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--nl-line); align-items: baseline; }
+.nl-posts a { font-weight: 500; font-size: 1.08rem; }
+.nl-empty { color: var(--nl-muted); margin: 0; }
+
+.nl-block { display: flex; flex-direction: column; gap: .9rem; }
+.nl-block h2 { font-size: 1.5rem; border-bottom: 2px solid var(--nl-fg); padding-bottom: .5rem; }
+.nl-bar { height: .5rem; background: var(--nl-line); border-radius: 99px; overflow: hidden; }
+.nl-bar b { display: block; height: 100%; background: var(--bs-primary); }
+.nl-line { display: flex; justify-content: space-between; gap: 1rem; font-size: .9rem; color: var(--nl-muted); font-variant-numeric: tabular-nums; }
+.nl-top, .nl-servers { list-style: none; padding: 0; margin: -.4rem 0 0; }
+.nl-top li { display: grid; grid-template-columns: 1.6rem minmax(0, 1fr) auto; gap: .6rem; padding-block: .55rem; border-bottom: 1px solid var(--nl-line); align-items: baseline; }
+.nl-top b { font: 700 1.15rem var(--nl-display); color: var(--nl-muted); }
+.nl-top span:first-of-type { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nl-top span:last-child, .nl-servers span:last-child { font-size: .9rem; color: var(--nl-muted); font-variant-numeric: tabular-nums; }
+.nl-servers li { display: flex; justify-content: space-between; gap: 1rem; padding-block: .55rem; border-bottom: 1px solid var(--nl-line); }
+
+/* ---------- Rejoindre ---------- */
+.nl-join { background: var(--nl-surface); border-block: 1px solid var(--nl-line); }
+.nl-join-in { display: grid; grid-template-columns: minmax(0, 18rem) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); padding-block: clamp(2.5rem, 6vw, 4rem); align-items: start; }
+.nl-join h2 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+.nl-steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; counter-reset: nl-step; }
+.nl-steps li { counter-increment: nl-step; border-top: 2px solid var(--nl-fg); padding-top: .8rem; display: flex; flex-direction: column; gap: .4rem; }
+.nl-steps li::before { content: counter(nl-step); font: 800 2.2rem/1 var(--nl-display); color: var(--bs-primary); }
+.nl-steps strong { font-weight: 600; }
+.nl-steps span { color: var(--nl-muted); font-size: .93rem; }
+
+/* ---------- Pied de page ---------- */
+.nl-footer { border-top: 1px solid var(--nl-line); font-size: .9rem; color: var(--nl-muted); }
+.nl-footer-in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1.5rem 3rem; padding-block: 2.25rem; }
+.nl-footer-brand { font-size: 1.6rem; margin-bottom: .4rem; }
+.nl-footer a { color: var(--nl-muted); }
+.nl-footer a:hover { color: var(--nl-fg); }
+.nl-footer-links { display: flex; gap: 1.1rem; font-size: 1.2rem; }
+.nl-credit a + a { margin-left: .4rem; }
+
+/* ---------- Petits écrans ---------- */
+@media (max-width: 991.98px) {
+    .nl-nav .navbar-collapse { padding-top: .75rem; }
+    .nl-nav-user { align-items: flex-start; margin-left: 0; margin-top: .5rem; }
+    .nl-home, .nl-join-in { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 767.98px) {
+    .nl-hero-row { grid-template-columns: minmax(0, 1fr); }
+    .nl-stats { gap: 1.25rem; justify-content: space-between; }
+    .nl-steps { grid-template-columns: minmax(0, 1fr); }
+    .nl-posts li { grid-template-columns: minmax(0, 1fr); gap: .1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nl-btn, .nl-lead h3 a, .nl-posts a { transition: none; }
+}
+
+/* ---------- Fond d'univers (mode sombre) ---------- */
+body.nl-sky[data-bs-theme=dark] {
+    --nl-veil: 19, 7, 34;
+    --nl-bg: rgb(var(--nl-veil));
+    --nl-hero: transparent;
+    --nl-surface: rgba(var(--nl-veil), .72);
+    --nl-line: rgba(255, 255, 255, .16);
+    --nl-muted: #cfc8dc;
+    --bs-body-bg-rgb: var(--nl-veil);
+}
+body.nl-sky-violet { --nl-sky: url(../img/ciel-violet.webp); }
+body.nl-sky-bleu[data-bs-theme=dark] { --nl-veil: 6, 11, 30; }
+body.nl-sky-bleu { --nl-sky: url(../img/ciel-bleu.webp); }
+body.nl-sky-emeraude[data-bs-theme=dark] { --nl-veil: 5, 18, 22; }
+body.nl-sky-emeraude { --nl-sky: url(../img/ciel-emeraude.webp); }
+body.nl-sky-braise[data-bs-theme=dark] { --nl-veil: 24, 7, 9; }
+body.nl-sky-braise { --nl-sky: url(../img/ciel-braise.webp); }
+body.nl-sky-aube[data-bs-theme=dark] { --nl-veil: 22, 9, 28; }
+body.nl-sky-aube { --nl-sky: url(../img/ciel-aube.webp); }
+body.nl-sky-etoiles[data-bs-theme=dark] { --nl-veil: 8, 8, 16; }
+body.nl-sky-etoiles { --nl-sky: url(../img/ciel-etoiles.webp); }
+body.nl-sky[data-bs-theme=dark]::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(var(--nl-veil), .2), rgba(var(--nl-veil), .62)), var(--nl-sky) center / cover no-repeat;
+}
+body.nl-sky[data-bs-theme=dark] .nl-stats,
+body.nl-sky[data-bs-theme=dark] .nl-join,
+body.nl-sky[data-bs-theme=dark] .card,
+body.nl-sky[data-bs-theme=dark] .dropdown-menu,
+body.nl-sky[data-bs-theme=dark] .modal-content,
+body.nl-sky[data-bs-theme=dark] .list-group-item {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+}
+body.nl-sky[data-bs-theme=dark] .nl-title { text-shadow: 0 .02em .12em rgba(var(--nl-veil), .45); }
+
+/* Blocs : chaque zone est un panneau translucide posé sur la galaxie */
+body.nl-sky[data-bs-theme=dark] .nl-nav > .container,
+body.nl-sky[data-bs-theme=dark] .nl-hero > .container,
+body.nl-sky[data-bs-theme=dark] .nl-home,
+body.nl-sky[data-bs-theme=dark] .nl-join-in,
+body.nl-sky[data-bs-theme=dark] .nl-footer-in,
+body.nl-sky[data-bs-theme=dark] main.content {
+    background: rgba(var(--nl-veil), var(--nl-veil-a));
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--nl-line);
+    border-radius: var(--nl-block-radius);
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+}
+body.nl-sky[data-bs-theme=dark] .nl-header { position: relative; z-index: 20; padding-top: 1rem; }
+body.nl-sky[data-bs-theme=dark] .nl-nav { padding-block: 0; }
+body.nl-sky[data-bs-theme=dark] .nl-nav > .container { padding-block: .75rem; }
+body.nl-sky[data-bs-theme=dark] .nl-hero { padding-block: 1rem 0; }
+body.nl-sky[data-bs-theme=dark] .nl-hero > .container { padding-block: clamp(1.25rem, 3vw, 2.25rem) clamp(1.5rem, 3vw, 2.5rem); }
+body.nl-sky[data-bs-theme=dark] .nl-home { margin-block: 1rem; padding-block: clamp(1.5rem, 3vw, 2.5rem); }
+body.nl-sky[data-bs-theme=dark] main.content { padding-block: clamp(1.25rem, 3vw, 2rem); margin-block: 1rem !important; }
+body.nl-sky[data-bs-theme=dark] .nl-join { background: none; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
+body.nl-sky[data-bs-theme=dark] .nl-join-in { padding-block: clamp(1.5rem, 4vw, 3rem); }
+body.nl-sky[data-bs-theme=dark] .nl-footer { background: none; border: 0; padding-block: 1rem; }
+body.nl-sky[data-bs-theme=dark] .nl-footer-in { padding-block: 1.5rem; }
+body.nl-sky[data-bs-theme=dark] .nl-stats { background: rgba(245, 240, 255, .06); -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (max-width: 575.98px) {
+    body.nl-sky[data-bs-theme=dark] .nl-nav > .container,
+    body.nl-sky[data-bs-theme=dark] .nl-hero > .container,
+    body.nl-sky[data-bs-theme=dark] .nl-home,
+    body.nl-sky[data-bs-theme=dark] .nl-join-in,
+    body.nl-sky[data-bs-theme=dark] .nl-footer-in,
+    body.nl-sky[data-bs-theme=dark] main.content { width: auto; margin-inline: .6rem; }
+}
+@media (max-width: 575.98px) {
+    body.nl-sky[data-bs-theme=dark] .nl-nav > .container { flex: 1 1 auto; }
+}
+
+/* ---------- Réglages : opacité, forme, police ---------- */
+body.nl { --nl-veil-a: .64; --nl-block-radius: .75rem; --nl-display-weight: 800; }
+body.nl-veil-leger { --nl-veil-a: .4; }
+body.nl-veil-fort { --nl-veil-a: .86; }
+body.nl-radius-droit { --nl-radius: 0; --nl-block-radius: 0; --bs-border-radius: 0; --bs-border-radius-sm: 0; --bs-border-radius-lg: 0; }
+body.nl-radius-rond { --nl-radius: .7rem; --nl-block-radius: 1.4rem; --bs-border-radius: .7rem; --bs-border-radius-sm: .5rem; --bs-border-radius-lg: 1rem; }
+body.nl-radius-rond .nl-btn, body.nl-radius-rond .nl-address { border-radius: 99px; }
+body.nl-radius-droit .nl-bar, body.nl-radius-droit .nl-toggler { border-radius: 0; }
+
+body.nl-font-large { --nl-display: "Unbounded", "Arial Black", sans-serif; --nl-display-weight: 700; }
+body.nl-font-large .nl-brand { font-size: 1.15rem; font-weight: 700; letter-spacing: 0; }
+body.nl-font-large .nl-head h2 { font-size: 1.4rem; }
+body.nl-font-large .nl-block h2 { font-size: 1.05rem; }
+body.nl-font-large .nl-lead h3 { font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.1; }
+body.nl-font-large .nl-join h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); line-height: 1.1; }
+body.nl-font-large .nl-stats dd { font-size: 1.4rem; }
+body.nl-font-large .nl-steps li::before { font-size: 1.5rem; }
+body.nl-font-large .nl-top b { font-size: .9rem; }
+body.nl-font-large .nl-footer-brand { font-size: 1.15rem; }
+body.nl-font-large main.content h1, body.nl-font-large main.content h2 { font-weight: 700; font-size: 1.6rem; }
+body.nl-font-large .nl-head h2, body.nl-font-large .nl-block h2, body.nl-font-large .nl-join h2, body.nl-font-large .nl-lead h3 { font-weight: 700; }
+
+body.nl-font-technique { --nl-display: "Chakra Petch", "Trebuchet MS", sans-serif; --nl-display-weight: 700; }
+body.nl-font-technique .nl-brand { font-size: 1.4rem; font-weight: 700; }
+body.nl-font-technique .nl-head h2 { font-size: 1.7rem; }
+body.nl-font-technique .nl-block h2 { font-size: 1.25rem; }
+body.nl-font-technique .nl-lead h3 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.05; }
+body.nl-font-technique .nl-join h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.05; }
+body.nl-font-technique .nl-stats dd { font-size: 1.7rem; }
+body.nl-font-technique .nl-footer-brand { font-size: 1.35rem; }
+body.nl-font-technique .nl-head h2, body.nl-font-technique .nl-block h2, body.nl-font-technique .nl-join h2, body.nl-font-technique .nl-lead h3, body.nl-font-technique main.content h1, body.nl-font-technique main.content h2 { font-weight: 700; }
+
+/* ---------- Réglages : navigation, accueil, pied de page ---------- */
+.nl-brand { display: inline-flex; align-items: center; gap: .6rem; }
+.nl-brand-logo { height: 2rem; width: auto; max-width: 6rem; object-fit: contain; }
+.nl-header-sticky { position: sticky; top: 0; z-index: 1030; }
+body.nl-sky[data-bs-theme=dark] .nl-header-sticky { position: sticky; top: 0; z-index: 1030; }
+.nl-home-single { grid-template-columns: minmax(0, 1fr); }
+.nl-home-single > aside.nl-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2rem; align-items: start; }
+.nl-footer-main { max-width: 30rem; }
+.nl-footer-text { margin: 0 0 .6rem; color: var(--nl-fg); }
+.nl-footer-nav { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-self: center; }
+.nl-footer-side { display: flex; flex-direction: column; align-items: flex-end; gap: .7rem; }
+@media (max-width: 767.98px) { .nl-footer-side { align-items: flex-start; } }

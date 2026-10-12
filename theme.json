@@ -1,0 +1,12 @@
+{
+    "id": "nebula-limeris",
+    "name": "Nebula Limeris",
+    "version": "1.0.0",
+    "description": "Fonds de nébuleuse au choix, nom du serveur en grand, blocs translucides, clair et sombre. Limeris.fr by Sliver91",
+    "url": "https://limeris.fr",
+    "authors": [
+        "Sliver91",
+        "Limeris.fr"
+    ],
+    "azuriom_api": "1.2.0"
+}
