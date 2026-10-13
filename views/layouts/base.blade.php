@@ -4,16 +4,16 @@
     $nlDarkColor = theme_config('color_dark', '#7af0c4');
     $nlLightColor = theme_config('color_light', '#0c7458');
     $nlIsDark = dark_theme($nlDefaultDark);
-    $nlSky = theme_config('background', 'bleu');
-    $nlSky = in_array($nlSky, ['violet', 'bleu', 'emeraude', 'braise', 'aube', 'etoiles'], true) ? $nlSky : null;
+    $nlSky = theme_config('background', 'blue');
+    $nlSky = in_array($nlSky, ['purple', 'blue', 'emerald', 'ember', 'dawn', 'stars'], true) ? $nlSky : null;
     $nlPick = function (string $key, array $allowed, string $default) {
         $value = theme_config($key, $default);
 
         return in_array($value, $allowed, true) ? $value : $default;
     };
-    $nlVeil = $nlPick('veil', ['leger', 'moyen', 'fort'], 'moyen');
-    $nlRadius = $nlPick('radius', ['droit', 'leger', 'rond'], 'leger');
-    $nlFont = $nlPick('title_font', ['condense', 'large', 'technique'], 'condense');
+    $nlVeil = $nlPick('veil', ['light', 'medium', 'strong'], 'medium');
+    $nlRadius = $nlPick('radius', ['square', 'soft', 'round'], 'soft');
+    $nlFont = $nlPick('title_font', ['condensed', 'wide', 'technical'], 'condensed');
 @endphp
 <!DOCTYPE html>
 @include('elements.base')

@@ -12,7 +12,7 @@
         .nl-cfg-thumb { display: block; width: 100%; aspect-ratio: 8 / 5; object-fit: cover; border-radius: .25rem; }
         .nl-cfg-sample { display: grid; place-items: center; aspect-ratio: 8 / 3; font-size: 1.9rem; line-height: 1; text-transform: uppercase; }
         .nl-cfg-shape { display: block; width: 62%; aspect-ratio: 8 / 3; margin: .5rem auto; border: 2px solid currentColor; }
-        .nl-cfg-veil { display: block; aspect-ratio: 8 / 3; border-radius: .25rem; background: url('{{ theme_asset('img/ciel-bleu-mini.webp') }}') center / cover; position: relative; overflow: hidden; }
+        .nl-cfg-veil { display: block; aspect-ratio: 8 / 3; border-radius: .25rem; background: url('{{ theme_asset('img/sky-blue-mini.webp') }}') center / cover; position: relative; overflow: hidden; }
         .nl-cfg-veil::after { content: ""; position: absolute; inset: 18% 12%; border-radius: .25rem; border: 1px solid rgba(255, 255, 255, .25); background: rgba(6, 11, 30, var(--nl-cfg-a)); }
     </style>
 @endpush
@@ -74,14 +74,14 @@
                 <div class="mb-4">
                     <label class="form-label d-block">{{ trans('theme::theme.config.background') }}</label>
                     <div class="row g-3">
-                        @foreach(['violet', 'bleu', 'emeraude', 'braise', 'aube', 'etoiles', 'none'] as $nlOption)
+                        @foreach(['purple', 'blue', 'emerald', 'ember', 'dawn', 'stars', 'none'] as $nlOption)
                             <div class="col-6 col-md-4 col-xl-3">
-                                <input type="radio" class="btn-check" name="background" id="background{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('background', 'bleu') === $nlOption)>
+                                <input type="radio" class="btn-check" name="background" id="background{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('background', 'blue') === $nlOption)>
                                 <label class="btn btn-outline-primary nl-cfg-card" for="background{{ $nlOption }}">
                                     @if($nlOption === 'none')
                                         <span class="nl-cfg-thumb bg-body-secondary"></span>
                                     @else
-                                        <img src="{{ theme_asset('img/ciel-'.$nlOption.'-mini.webp') }}" alt="" class="nl-cfg-thumb">
+                                        <img src="{{ theme_asset('img/sky-'.$nlOption.'-mini.webp') }}" alt="" class="nl-cfg-thumb">
                                     @endif
                                     <span class="d-block mt-2">{{ trans('theme::theme.config.bg_'.$nlOption) }}</span>
                                 </label>
@@ -94,9 +94,9 @@
                 <div class="mb-4">
                     <label class="form-label d-block">{{ trans('theme::theme.config.veil') }}</label>
                     <div class="row g-3">
-                        @foreach(['leger' => '.4', 'moyen' => '.64', 'fort' => '.86'] as $nlOption => $nlAlpha)
+                        @foreach(['light' => '.4', 'medium' => '.64', 'strong' => '.86'] as $nlOption => $nlAlpha)
                             <div class="col-4 col-xl-3">
-                                <input type="radio" class="btn-check" name="veil" id="veil{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('veil', 'moyen') === $nlOption)>
+                                <input type="radio" class="btn-check" name="veil" id="veil{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('veil', 'medium') === $nlOption)>
                                 <label class="btn btn-outline-primary nl-cfg-card" for="veil{{ $nlOption }}">
                                     <span class="nl-cfg-veil" style="--nl-cfg-a: {{ $nlAlpha }}"></span>
                                     <span class="d-block mt-2">{{ trans('theme::theme.config.veil_'.$nlOption) }}</span>
@@ -109,9 +109,9 @@
                 <div class="mb-4">
                     <label class="form-label d-block">{{ trans('theme::theme.config.radius') }}</label>
                     <div class="row g-3">
-                        @foreach(['droit' => '0', 'leger' => '.4rem', 'rond' => '1.1rem'] as $nlOption => $nlRadius)
+                        @foreach(['square' => '0', 'soft' => '.4rem', 'round' => '1.1rem'] as $nlOption => $nlRadius)
                             <div class="col-4 col-xl-3">
-                                <input type="radio" class="btn-check" name="radius" id="radius{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('radius', 'leger') === $nlOption)>
+                                <input type="radio" class="btn-check" name="radius" id="radius{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('radius', 'soft') === $nlOption)>
                                 <label class="btn btn-outline-primary nl-cfg-card" for="radius{{ $nlOption }}">
                                     <span class="nl-cfg-shape" style="border-radius: {{ $nlRadius }}"></span>
                                     <span class="d-block mt-2">{{ trans('theme::theme.config.radius_'.$nlOption) }}</span>
@@ -124,9 +124,9 @@
                 <div class="mb-4">
                     <label class="form-label d-block">{{ trans('theme::theme.config.title_font') }}</label>
                     <div class="row g-3">
-                        @foreach(['condense' => ['Big Shoulders Display', 800, '2.3rem'], 'large' => ['Unbounded', 700, '1.25rem'], 'technique' => ['Chakra Petch', 700, '1.75rem']] as $nlOption => $nlFont)
+                        @foreach(['condensed' => ['Big Shoulders Display', 800, '2.3rem'], 'wide' => ['Unbounded', 700, '1.25rem'], 'technical' => ['Chakra Petch', 700, '1.75rem']] as $nlOption => $nlFont)
                             <div class="col-4 col-xl-3">
-                                <input type="radio" class="btn-check" name="title_font" id="font{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('title_font', 'condense') === $nlOption)>
+                                <input type="radio" class="btn-check" name="title_font" id="font{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('title_font', 'condensed') === $nlOption)>
                                 <label class="btn btn-outline-primary nl-cfg-card" for="font{{ $nlOption }}">
                                     <span class="nl-cfg-sample" style="font-family: '{{ $nlFont[0] }}', sans-serif; font-weight: {{ $nlFont[1] }}; font-size: {{ $nlFont[2] }}">{{ Str::limit(site_name(), 12, '') }}</span>
                                     <span class="d-block mt-2">{{ trans('theme::theme.config.font_'.$nlOption) }}</span>
@@ -183,8 +183,8 @@
                     <div class="mb-3 col-md-6">
                         <label class="form-label d-block">{{ trans('theme::theme.config.title_size') }}</label>
                         <div class="btn-group" role="group">
-                            @foreach(['normal', 'grand', 'geant'] as $nlOption)
-                                <input type="radio" class="btn-check" name="title_size" id="size{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('title_size', 'grand') === $nlOption)>
+                            @foreach(['normal', 'large', 'full'] as $nlOption)
+                                <input type="radio" class="btn-check" name="title_size" id="size{{ $nlOption }}" value="{{ $nlOption }}" @checked($nlCfg('title_size', 'large') === $nlOption)>
                                 <label class="btn btn-outline-primary" for="size{{ $nlOption }}">{{ trans('theme::theme.config.size_'.$nlOption) }}</label>
                             @endforeach
                         </div>

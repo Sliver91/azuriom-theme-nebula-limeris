@@ -1,6 +1,6 @@
 # Nebula Limeris
 
-![Nebula Limeris, home page with the Blue abyss background](docs/fond-bleu.jpg)
+![Nebula Limeris, home page with the Blue abyss background](docs/background-blue.jpg)
 
 **Limeris.fr by Sliver91** · [Discord](https://discord.gg/4kV8pgC3Ck) · [limeris.fr](https://limeris.fr)
 
@@ -15,21 +15,21 @@ A theme for the [Azuriom](https://azuriom.com) CMS. Your server name is displaye
 
 | | |
 |:-:|:-:|
-| ![Blue abyss](docs/fond-bleu.jpg) **Blue abyss** | ![Purple nebula](docs/fond-violet.jpg) **Purple nebula** |
-| ![Emerald aurora](docs/fond-emeraude.jpg) **Emerald aurora** | ![Ember](docs/fond-braise.jpg) **Ember** |
-| ![Pink dawn](docs/fond-aube.jpg) **Pink dawn** | ![Star field](docs/fond-etoiles.jpg) **Star field** |
+| ![Blue abyss](docs/background-blue.jpg) **Blue abyss** | ![Purple nebula](docs/background-purple.jpg) **Purple nebula** |
+| ![Emerald aurora](docs/background-emerald.jpg) **Emerald aurora** | ![Ember](docs/background-ember.jpg) **Ember** |
+| ![Pink dawn](docs/background-dawn.jpg) **Pink dawn** | ![Star field](docs/background-stars.jpg) **Star field** |
 
 ### News, vote goal and Discord
 
-![News, vote goal and Discord block](docs/actualites.jpg)
+![News, vote goal and Discord block](docs/news.jpg)
 
 ### Light mode
 
-![Home page in light mode](docs/mode-clair.jpg)
+![Home page in light mode](docs/light-mode.jpg)
 
 ### Settings with illustrated cards
 
-![Theme settings screen](docs/reglages.jpg)
+![Theme settings screen](docs/settings.jpg)
 
 Screenshots use demo content (in French).
 <!-- /gallery -->

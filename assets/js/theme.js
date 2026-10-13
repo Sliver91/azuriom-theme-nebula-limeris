@@ -3,7 +3,7 @@
     'use strict';
 
     /* The big title is sized to fit the available width, whatever its length. */
-    var ratios = { normal: 0.5, grand: 0.68, geant: 1 };
+    var ratios = { normal: 0.5, large: 0.68, full: 1 };
 
     function fitTitle(title) {
         var inner = title.firstElementChild;
@@ -11,7 +11,7 @@
             return;
         }
         var narrow = window.matchMedia('(max-width: 767px)').matches;
-        var ratio = narrow ? 1 : (ratios[title.getAttribute('data-nl-fit')] || ratios.grand);
+        var ratio = narrow ? 1 : (ratios[title.getAttribute('data-nl-fit')] || ratios.large);
 
         title.style.fontSize = '100px';
         var width = inner.getBoundingClientRect().width;

@@ -10,7 +10,7 @@
         $nlAddress = $server ? $server->fullAddress() : theme_config('address');
         $nlJoinUrl = $server ? $server->join_url : null;
         $nlVersion = theme_config('version');
-        $nlSize = in_array(theme_config('title_size'), ['normal', 'grand', 'geant'], true) ? theme_config('title_size') : 'grand';
+        $nlSize = in_array(theme_config('title_size'), ['normal', 'large', 'full'], true) ? theme_config('title_size') : 'large';
         $nlDiscord = theme_config('discord');
         $nlTitle = theme_config('title') ?: site_name();
         $nlTopCount = in_array((int) theme_config('top_count', 5), [3, 5, 10], true) ? (int) theme_config('top_count', 5) : 5;

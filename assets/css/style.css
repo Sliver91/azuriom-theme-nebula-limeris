@@ -218,17 +218,17 @@ body.nl-sky[data-bs-theme=dark] {
     --nl-muted: #cfc8dc;
     --bs-body-bg-rgb: var(--nl-veil);
 }
-body.nl-sky-violet { --nl-sky: url(../img/ciel-violet.webp); }
-body.nl-sky-bleu[data-bs-theme=dark] { --nl-veil: 6, 11, 30; }
-body.nl-sky-bleu { --nl-sky: url(../img/ciel-bleu.webp); }
-body.nl-sky-emeraude[data-bs-theme=dark] { --nl-veil: 5, 18, 22; }
-body.nl-sky-emeraude { --nl-sky: url(../img/ciel-emeraude.webp); }
-body.nl-sky-braise[data-bs-theme=dark] { --nl-veil: 24, 7, 9; }
-body.nl-sky-braise { --nl-sky: url(../img/ciel-braise.webp); }
-body.nl-sky-aube[data-bs-theme=dark] { --nl-veil: 22, 9, 28; }
-body.nl-sky-aube { --nl-sky: url(../img/ciel-aube.webp); }
-body.nl-sky-etoiles[data-bs-theme=dark] { --nl-veil: 8, 8, 16; }
-body.nl-sky-etoiles { --nl-sky: url(../img/ciel-etoiles.webp); }
+body.nl-sky-purple { --nl-sky: url(../img/sky-purple.webp); }
+body.nl-sky-blue[data-bs-theme=dark] { --nl-veil: 6, 11, 30; }
+body.nl-sky-blue { --nl-sky: url(../img/sky-blue.webp); }
+body.nl-sky-emerald[data-bs-theme=dark] { --nl-veil: 5, 18, 22; }
+body.nl-sky-emerald { --nl-sky: url(../img/sky-emerald.webp); }
+body.nl-sky-ember[data-bs-theme=dark] { --nl-veil: 24, 7, 9; }
+body.nl-sky-ember { --nl-sky: url(../img/sky-ember.webp); }
+body.nl-sky-dawn[data-bs-theme=dark] { --nl-veil: 22, 9, 28; }
+body.nl-sky-dawn { --nl-sky: url(../img/sky-dawn.webp); }
+body.nl-sky-stars[data-bs-theme=dark] { --nl-veil: 8, 8, 16; }
+body.nl-sky-stars { --nl-sky: url(../img/sky-stars.webp); }
 body.nl-sky[data-bs-theme=dark]::before {
     content: "";
     position: fixed;
@@ -287,35 +287,35 @@ body.nl-sky[data-bs-theme=dark] .nl-stats { background: rgba(245, 240, 255, .06)
 
 /* ---------- Settings: opacity, shape, font ---------- */
 body.nl { --nl-veil-a: .64; --nl-block-radius: .75rem; --nl-display-weight: 800; }
-body.nl-veil-leger { --nl-veil-a: .4; }
-body.nl-veil-fort { --nl-veil-a: .86; }
-body.nl-radius-droit { --nl-radius: 0; --nl-block-radius: 0; --bs-border-radius: 0; --bs-border-radius-sm: 0; --bs-border-radius-lg: 0; }
-body.nl-radius-rond { --nl-radius: .7rem; --nl-block-radius: 1.4rem; --bs-border-radius: .7rem; --bs-border-radius-sm: .5rem; --bs-border-radius-lg: 1rem; }
-body.nl-radius-rond .nl-btn, body.nl-radius-rond .nl-address { border-radius: 99px; }
-body.nl-radius-droit .nl-bar, body.nl-radius-droit .nl-toggler { border-radius: 0; }
+body.nl-veil-light { --nl-veil-a: .4; }
+body.nl-veil-strong { --nl-veil-a: .86; }
+body.nl-radius-square { --nl-radius: 0; --nl-block-radius: 0; --bs-border-radius: 0; --bs-border-radius-sm: 0; --bs-border-radius-lg: 0; }
+body.nl-radius-round { --nl-radius: .7rem; --nl-block-radius: 1.4rem; --bs-border-radius: .7rem; --bs-border-radius-sm: .5rem; --bs-border-radius-lg: 1rem; }
+body.nl-radius-round .nl-btn, body.nl-radius-round .nl-address { border-radius: 99px; }
+body.nl-radius-square .nl-bar, body.nl-radius-square .nl-toggler { border-radius: 0; }
 
-body.nl-font-large { --nl-display: "Unbounded", "Arial Black", sans-serif; --nl-display-weight: 700; }
-body.nl-font-large .nl-brand { font-size: 1.15rem; font-weight: 700; letter-spacing: 0; }
-body.nl-font-large .nl-head h2 { font-size: 1.4rem; }
-body.nl-font-large .nl-block h2 { font-size: 1.05rem; }
-body.nl-font-large .nl-lead h3 { font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.1; }
-body.nl-font-large .nl-join h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); line-height: 1.1; }
-body.nl-font-large .nl-stats dd { font-size: 1.4rem; }
-body.nl-font-large .nl-steps li::before { font-size: 1.5rem; }
-body.nl-font-large .nl-top b { font-size: .9rem; }
-body.nl-font-large .nl-footer-brand { font-size: 1.15rem; }
-body.nl-font-large main.content h1, body.nl-font-large main.content h2 { font-weight: 700; font-size: 1.6rem; }
-body.nl-font-large .nl-head h2, body.nl-font-large .nl-block h2, body.nl-font-large .nl-join h2, body.nl-font-large .nl-lead h3 { font-weight: 700; }
+body.nl-font-wide { --nl-display: "Unbounded", "Arial Black", sans-serif; --nl-display-weight: 700; }
+body.nl-font-wide .nl-brand { font-size: 1.15rem; font-weight: 700; letter-spacing: 0; }
+body.nl-font-wide .nl-head h2 { font-size: 1.4rem; }
+body.nl-font-wide .nl-block h2 { font-size: 1.05rem; }
+body.nl-font-wide .nl-lead h3 { font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.1; }
+body.nl-font-wide .nl-join h2 { font-size: clamp(1.5rem, 3.2vw, 2.2rem); line-height: 1.1; }
+body.nl-font-wide .nl-stats dd { font-size: 1.4rem; }
+body.nl-font-wide .nl-steps li::before { font-size: 1.5rem; }
+body.nl-font-wide .nl-top b { font-size: .9rem; }
+body.nl-font-wide .nl-footer-brand { font-size: 1.15rem; }
+body.nl-font-wide main.content h1, body.nl-font-wide main.content h2 { font-weight: 700; font-size: 1.6rem; }
+body.nl-font-wide .nl-head h2, body.nl-font-wide .nl-block h2, body.nl-font-wide .nl-join h2, body.nl-font-wide .nl-lead h3 { font-weight: 700; }
 
-body.nl-font-technique { --nl-display: "Chakra Petch", "Trebuchet MS", sans-serif; --nl-display-weight: 700; }
-body.nl-font-technique .nl-brand { font-size: 1.4rem; font-weight: 700; }
-body.nl-font-technique .nl-head h2 { font-size: 1.7rem; }
-body.nl-font-technique .nl-block h2 { font-size: 1.25rem; }
-body.nl-font-technique .nl-lead h3 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.05; }
-body.nl-font-technique .nl-join h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.05; }
-body.nl-font-technique .nl-stats dd { font-size: 1.7rem; }
-body.nl-font-technique .nl-footer-brand { font-size: 1.35rem; }
-body.nl-font-technique .nl-head h2, body.nl-font-technique .nl-block h2, body.nl-font-technique .nl-join h2, body.nl-font-technique .nl-lead h3, body.nl-font-technique main.content h1, body.nl-font-technique main.content h2 { font-weight: 700; }
+body.nl-font-technical { --nl-display: "Chakra Petch", "Trebuchet MS", sans-serif; --nl-display-weight: 700; }
+body.nl-font-technical .nl-brand { font-size: 1.4rem; font-weight: 700; }
+body.nl-font-technical .nl-head h2 { font-size: 1.7rem; }
+body.nl-font-technical .nl-block h2 { font-size: 1.25rem; }
+body.nl-font-technical .nl-lead h3 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); line-height: 1.05; }
+body.nl-font-technical .nl-join h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.05; }
+body.nl-font-technical .nl-stats dd { font-size: 1.7rem; }
+body.nl-font-technical .nl-footer-brand { font-size: 1.35rem; }
+body.nl-font-technical .nl-head h2, body.nl-font-technical .nl-block h2, body.nl-font-technical .nl-join h2, body.nl-font-technical .nl-lead h3, body.nl-font-technical main.content h1, body.nl-font-technical main.content h2 { font-weight: 700; }
 
 /* ---------- Settings: navigation, home page, footer ---------- */
 .nl-brand { display: inline-flex; align-items: center; gap: .6rem; }

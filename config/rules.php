@@ -15,7 +15,7 @@ return [
     'tagline' => ['nullable', 'string', 'max:200'],
     'address' => ['nullable', 'string', 'max:100'],
     'version' => ['nullable', 'string', 'max:20'],
-    'title_size' => ['required', 'in:normal,grand,geant'],
+    'title_size' => ['required', 'in:normal,large,full'],
     'show_vote_button' => ['required', 'boolean'],
     'extra_label' => ['nullable', 'string', 'max:40'],
     'extra_url' => ['nullable', 'url', 'max:200'],
@@ -32,10 +32,10 @@ return [
     'discord' => ['nullable', 'url', 'max:200'],
 
     // Appearance
-    'background' => ['required', 'in:none,violet,bleu,emeraude,braise,aube,etoiles'],
-    'veil' => ['required', 'in:leger,moyen,fort'],
-    'radius' => ['required', 'in:droit,leger,rond'],
-    'title_font' => ['required', 'in:condense,large,technique'],
+    'background' => ['required', 'in:none,purple,blue,emerald,ember,dawn,stars'],
+    'veil' => ['required', 'in:light,medium,strong'],
+    'radius' => ['required', 'in:square,soft,round'],
+    'title_font' => ['required', 'in:condensed,wide,technical'],
     'color_dark' => ['required', new Color()],
     'color_light' => ['required', new Color()],
     'default_dark' => ['required', 'boolean'],
